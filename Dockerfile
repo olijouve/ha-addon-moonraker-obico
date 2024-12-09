@@ -23,7 +23,7 @@ RUN mkdir -p printer_data/config printer_data/logs \
 
 COPY --chown=obico:obico --from=build /opt/venv venv
 COPY --chown=obico:obico . moonraker-obico
-
+ADD moonraker-obico.cfg /opt/printer_data/config/
 USER obico
 ENV PYTHONPATH=/opt/moonraker-obico
 VOLUME ["/opt/printer_data/config", "/opt/printer_data/logs"]
