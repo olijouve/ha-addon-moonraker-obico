@@ -26,6 +26,6 @@ COPY --chown=obico:obico . moonraker-obico
 ADD moonraker-obico.cfg /opt/printer_data/config/
 USER obico
 ENV PYTHONPATH=/opt/moonraker-obico
-VOLUME ["/opt/printer_data/config", "/opt/printer_data/logs"]
+#VOLUME ["/opt/printer_data/config", "/opt/printer_data/logs"]
 ENTRYPOINT ["/opt/venv/bin/python", "-m", "moonraker_obico.app"]
 CMD ["-c", "/opt/printer_data/config/moonraker-obico.cfg"]
